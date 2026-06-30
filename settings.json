@@ -7,6 +7,99 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "diff_view_style": "split",
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "ssh_connections": [
+    {
+      "host": "hous_basement",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/horisofine"
+          ]
+        },
+        {
+          "paths": [
+            "/home/horisofine/.openclaw/./"
+          ]
+        }
+      ]
+    },
+    {
+      "host": "patchwork",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/root/patchwork"
+          ]
+        }
+      ]
+    }
+  ],
+  "show_edit_predictions": false,
+  "languages": {
+    "Rust": {
+      "show_edit_predictions": false
+    },
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "command": "oxfmt",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "linter": "oxlint"
+    },
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "command": "oxfmt",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "linter": "oxlint"
+    },
+    "TSX": {
+      "formatter": {
+        "external": {
+          "command": "oxfmt",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "linter": "oxlint"
+    },
+    "JSX": {
+      "formatter": {
+        "external": {
+          "command": "oxfmt",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "linter": "oxlint"
+    }
+  },
+  "git_panel": {
+    "dock": "left",
+    "tree_view": true
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "single_file_review": true,
+    "model_parameters": []
+  },
   "lsp": {
     "vtsls": {
       "settings": {
@@ -25,10 +118,19 @@
     }
   },
   "edit_predictions": {
+    "copilot": {
+      "enable_next_edit_suggestions": true
+    },
     "provider": "copilot"
   },
   "buffer_font_family": "JetBrainsMonoNL Nerd Font",
   "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
+    "claude-acp": {
+      "type": "registry"
+    },
     "opencode": {
       "type": "custom",
       "command": "opencode",
